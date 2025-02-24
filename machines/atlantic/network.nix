@@ -1,9 +1,10 @@
-_: {
+{ config, ... }:
+{
   systemd.network = {
     enable = true;
     networks.eth0 = {
       address = [
-        "103.47.224.225/22"
+        "${config.sops.secrets.atlantic-address.path}"
       ];
       gateway = [ "103.47.224.1" ];
       matchConfig.Name = "eth0";
