@@ -4,7 +4,7 @@
     enable = true;
     networks.eth0 = {
       address = [
-        "${config.sops.secrets.atlantic-address.path}"
+        "103.47.224.225/22"
       ];
       gateway = [ "103.47.224.1" ];
       matchConfig.Name = "eth0";
